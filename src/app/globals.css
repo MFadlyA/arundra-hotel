@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  --background: #e9e5df;
+  --foreground: #39332d;
+
+  --surface: #f0ede7;
+  --surface-muted: #ded8cf;
+
+  --primary: #755b43;
+  --primary-hover: #604832;
+
+  --accent: #c4a477;
+  --accent-light: #d5b78a;
+
+  --border: #d1c9be;
+  --muted: #81776c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+}
+
+button,
+a,
+input,
+select {
+  transition: all 0.2s ease;
+}
+
+button,
+a,
+[role="button"] {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #a58b72;
+  color: white;
+}
+
+input,
+select {
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--secondary);
+}
+
+.container-custom {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (max-width: 640px) {
+  .container-custom {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
